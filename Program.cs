@@ -11,7 +11,7 @@ namespace RomanoADecimal
             Console.Write("Ingrese un número romano: ");
             string romano = Console.ReadLine().ToUpper();
 
-            int decimalNum = RomanoADecimal(romano);
+            int decimalNum = convertores(romano);
 
             if (decimalNum != -1)
                 Console.WriteLine($"El número romano {romano} equivale a {decimalNum} en decimal.");
@@ -19,18 +19,19 @@ namespace RomanoADecimal
                 Console.WriteLine("Número romano inválido.");
         }
 
-        static int RomanoADecimal(string romano)
+        static int convertores(string romano)
         {
             Dictionary<char, int> valores = new Dictionary<char, int>()
-        {
-            {'I', 1 },
-            {'V', 5 },
-            {'X', 10 },
-            {'L', 50 },
-            {'C', 100 },
-            {'D', 500 },
-            {'M', 1000 }
-        };
+            {
+
+                {'I', 1 },
+                {'V', 5 },
+                {'X', 10 },
+                {'L', 50 },
+                {'C', 100 },
+                {'D', 500 },
+                {'M', 1000 }
+            };
 
             int total = 0;
             int valorAnterior = 0;

@@ -54,7 +54,7 @@ namespace RomanoADecimal
 
                 if (valor < valorAnterior)
                 {
-                    if (!EsSustraccionValida(letra, simboloAnterior))
+                    if (!EsSustraccionValidas(letra, simboloAnterior))
                         return -1;
                     total -= valor;
                 }
@@ -70,7 +70,7 @@ namespace RomanoADecimal
             return total;
 
 
-            static bool EsSustraccionValida(char menor, char mayor)
+            static bool EsSustraccionValidas(char menor, char mayor)
             {
                 return (menor == 'I' && (mayor == 'V' || mayor == 'X')) || (menor == 'X' && (mayor == 'L' || mayor == 'C')) || (menor == 'C' && (mayor == 'D' || mayor == 'M'));
             }

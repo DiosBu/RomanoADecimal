@@ -7,16 +7,16 @@ namespace RomanoADecimal
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Conversor de números romanos a decimales");
-            Console.Write("Ingrese un número romano: ");
+            Console.WriteLine("Conversor de numeros romanos a decimales");
+            Console.Write("Ingrese un numero romano: ");
             string romano = Console.ReadLine().ToUpper();
 
             int decimalNum = convertores(romano);
 
             if (decimalNum != -1)
-                Console.WriteLine($"El número romano {romano} equivale a {decimalNum} en decimal.");
+                Console.WriteLine($"El numero romano {romano} equivale a {decimalNum} en decimal.");
             else
-                Console.WriteLine("Número romano inválido.");
+                Console.WriteLine("Numero romano invalido.");
         }
 
         static int convertores(string romano)
@@ -50,7 +50,6 @@ namespace RomanoADecimal
 
                 valorAnterior = valor;
             }
-
             return total;
         }
     }
